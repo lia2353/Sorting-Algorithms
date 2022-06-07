@@ -26,8 +26,8 @@ Makes the minimum possible number of swaps, n − 1 in the worst case (the final
 
 --------------------------------
 
-<img src="Selection_Sort_Baeldung_on_Computer_Science.png" width="350" align="left"/>
-<img src="Selection_Sort_Stable_Baeldung_on_Computer_Science.png" width="350" align="center"/>
+<img src="imgs/Selection_Sort_Baeldung_on_Computer_Science.png" width="350" align="left"/>
+<img src="imgs/Selection_Sort_Stable_Baeldung_on_Computer_Science.png" width="350" align="center"/>
 
 Swapping might impact in pushing smaller key to a position greater than the bigger key (keys have equal values), which makes the algorithm unstable.  
 Selection sort can be made **Stable** if instead of swapping, the minimum element is placed in its position by pushing every element one step forward. In simple terms it uses Insertion sort technique. That leads to performing O(N^2) swaps
@@ -75,7 +75,7 @@ Every element is compared to every other element.
 
 --------------------------------
 
-<img src="Bubble_Sort.png" width="350" align="left"/> <br />  
+<img src="imgs/Bubble_Sort.png" width="350" align="left"/> <br />  
      
 #### USE:
 - When the array is partially sorted - since bubble sort is adaptive;

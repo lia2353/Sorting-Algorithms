@@ -75,8 +75,8 @@ Every element is compared to every other element.
 
 --------------------------------
 
-<img src="Bubble_Sort.png" width="350" align="left"/>
-
+<img src="Bubble_Sort.png" width="350" align="left"/>   
+     
 #### USE:
 - When the array is partially sorted - since bubble sort is adaptive;
 - When we have memory usage constraints;
@@ -88,6 +88,7 @@ Every element is compared to every other element.
 - When the array is completely  unsorted;
 - When wanted a faster run time and memory is not a concern.
 
+<br /> <br />
 
 
 

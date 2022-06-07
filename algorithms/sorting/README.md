@@ -19,7 +19,7 @@ Every element is compared to every other element.
 #### ***Number of Swaps O(N)***
 Makes the minimum possible number of swaps, n − 1 in the worst case (the final element is already in place).
 
-![Selection Sort](Selection_Sort_Baeldung_on_Computer_Science.png)
+![<img src="Selection_Sort_Baeldung_on_Computer_Science.png" width="100" align="center"/>](Selection_Sort_Baeldung_on_Computer_Science.png)
 
 Rendered Image
 

@@ -39,7 +39,7 @@ public class SelectionSort {
         - When the array is nearly sorted
         - When you want a faster run time and memory is not a concern.
      */
-    public static int[] sort(int[] array) {
+    public static void sort(int[] array) {
 
         // Extend the length of the sorter array [0 ... i]; Take (i < length - 1) because single element is already sorted
         for (int i = 0; i < array.length - 1; ++i) {
@@ -61,8 +61,6 @@ public class SelectionSort {
                 array[minIndex] = temp;
             }
         }
-
-        return array;
     }
 
     /*
@@ -73,7 +71,7 @@ public class SelectionSort {
         every element one step forward. In simple terms it uses Insertion sort technique.
         That leads to performing O(N^2) swaps
     */
-    public static int[] stableSort(int[] array) {
+    public static void stableSort(int[] array) {
 
         // Extend the length of the sorter array [0 ... i]; Take (i < length - 1) because single element is already sorted
         for (int i = 0; i < array.length - 1; ++i) {
@@ -99,8 +97,6 @@ public class SelectionSort {
             }
 
         }
-
-        return array;
     }
 }
 

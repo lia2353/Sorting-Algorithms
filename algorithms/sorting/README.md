@@ -94,5 +94,7 @@ Every element is compared to every other element.
 
 
 **References:**  
-:point_right: [Geeks for Geeks](https://www.geeksforgeeks.org/sorting-algorithms/)]  
-:point_right: [nj](https://www.acodersjourney.com/tag/programming-interviews/)
+:point_right: [Geeks for Geeks](https://www.geeksforgeeks.org/sorting-algorithms/)
+:point_right: [Wikipedia](https://en.wikipedia.org/wiki/Sorting_algorithm)
+:point_right: [Acoders Journey](https://www.acodersjourney.com/tag/programming-interviews/)
+:point_right: [Baeldung](https://www.baeldung.com/cs/category/algorithms/sorting)

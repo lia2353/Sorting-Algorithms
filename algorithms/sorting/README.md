@@ -58,14 +58,12 @@ The algorithm works by repeatedly swapping the adjacent elements if they are in 
 - [Time Complexity of Standard Bubble Sort](https://www.baeldung.com/cs/bubble-sort-time-complexity#time-complexity-analysis), 
 [Time Complexity of Improved Bubble Sort](https://www.baeldung.com/cs/bubble-sort-time-complexity#2-time-complexity-of-improved-bubble-sort)
 
-
-
 ***Space Complexity O(1)***  
 In-place algorithm.
 
 ***Stable algorithm*** 
 
-***Adaptive ?*** 
+***Adaptive*** 
 improvedSort version is Adaptive. If the array is partially sorted (no swaps were performed), we'll terminatethe sorting early.
 
 ***Number of Comparisons (Worst case) O(N^2)***
@@ -88,6 +86,52 @@ Every element is compared to every other element.
 - When the array is completely  unsorted;
 - When wanted a faster run time and memory is not a concern.
 
+
+
+
+# Insertion Sort
+
+The algorithm maintains two subarrays in a given array:
+- an already sorted subarray
+- remaining subarray which is unsorted
+Starts with trivially sorted subarray of size 1. Picks an elements from the unsorted part and inserts it at the correct place in the sorted part (shifts all larger elements back to make space, and inserts into that correct position).
+
+--------------------------------
+***Time Complexity***
+- Worst-case and Average complexity of O(N^2);
+- Best-case of O(N) , when an array is already sorted (During each iteration, the element to be sorted is only compared with the right-most element of the sorted subarray.)  
+
+***Space Complexity O(1)***
+- In-place algorithm  
+
+***Stable algorithm***
+- As elements bubble to the correct position in the sorted subarray, the original relative order of equal elements is maintained. 
+
+***Adaptive***
+- Efficient for data sets that are already substantially sorted.
+--------------------------------
+
+<img src="imgs/Insertion_Sort_Wikipedia.png" width="350" align="left"/>
+<img src="imgs/Insertion_Sort_Recursive_Wikipedia.png " width="350" align="center"/> <br />  
+
+**Recursive Insertion Sort** has NO performance/implementation advantages over Iterative Insertion Sort. This increases the additional memory consumption from O(1) to O(N) (at the deepest level of recursion the stack contains N references to the array, each with accompanying value of variable size from N down to 1).  
+**Binary Insertion Sort** uses binary search to find the proper location to insert the selected item at each iteration. In normal insertion, sorting takes O(i) (at ith iteration) in worst case. We can reduce it to O(logi) by using binary search. The algorithm, as a whole, still has worst case running time of O(N^2) because of the series of swaps required for each insertion.
+
+
+#### USE:
+- When the array is nearly sorted - since insertion sort is adaptive
+- When we have memory usage constraints
+- When a simple sorting implementation is desired
+- When the array to be sorted is relatively small
+- When you need to sort elements online - that is sorting them as they come in.  
+
+\* Insertion sort is one of the fastest algorithms for sorting very small arrays, even faster than quicksort;
+Indeed, good quicksort implementations use insertion sort for arrays smaller than a certain threshold, also when arising as subproblems; the exact threshold must be determined experimentally and depends on the machine, but is commonly around ten.
+
+#### AVOID:
+- When the array to be sorted has a large number of elements
+- When the array is completely  unsorted
+- When you want a faster run time and memory is not a concern.
 
 
 

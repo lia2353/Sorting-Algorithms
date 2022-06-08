@@ -124,7 +124,7 @@ public class InsertionSort {
             return (key < array[end]) ? end : end + 1;
         }
 
-        // addition can overflow -> using turnaround
+        // Addition can overflow -> using workaround
         int mid = end + (start - end) / 2;
 
         if (key >= array[mid]) {

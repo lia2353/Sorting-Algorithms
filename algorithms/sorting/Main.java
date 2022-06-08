@@ -10,7 +10,7 @@ public class Main {
 
         print(averageArray);
 
-        SelectionSort.sort(averageArray);
+        //SelectionSort.sort(averageArray);
         //SelectionSort.stableSort(averageArray);
 
         //BubbleSort.sort(averageArray);
@@ -20,6 +20,8 @@ public class Main {
         //InsertionSort.sort(averageArray);
         //InsertionSort.recursiveSort(averageArray);
         //InsertionSort.binarySort(averageArray);
+
+        MergeSort.sort(averageArray);
 
         print(averageArray);
     }

@@ -65,9 +65,9 @@ The algorithm works by repeatedly swapping the adjacent elements if they are in 
 ***Space Complexity O(1)***  
 In-place algorithm.
 
-***Stable algorithm*** 
+***Stable algorithm***  
 
-***Adaptive*** 
+***Adaptive***  
 improvedSort version is Adaptive. If the array is partially sorted (no swaps were performed), we'll terminatethe sorting early.
 
 ***Number of Comparisons (Worst case) O(N^2)***
@@ -153,10 +153,10 @@ Merge Sort is a Divide-and-Conquer algorithm
 --------------------------------
 ***Comparison-based sorting***
 
-***Time Complexity O(N logN)***
+***Time Complexity O(N logN)***  
 The complexity of the merge function is O(len1 + len2), where len1 is the length of the first half, and len2 is the length of the second half.
   
-***Space Complexity O(N)***
+***Space Complexity O(N)***  
 - Not in-place algorithm
 - Requires temporary array to store the merged and sorted subarrays. All elements are copied into an auxiliary array so N auxiliary space is required for merge sort.
 

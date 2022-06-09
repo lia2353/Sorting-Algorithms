@@ -136,6 +136,10 @@ Indeed, good quicksort implementations use insertion sort for arrays smaller tha
 
 
 
+# Merge Sort
+
+
+
 
 **References:**  
 :point_right: [Geeks for Geeks](https://www.geeksforgeeks.org/sorting-algorithms/)  

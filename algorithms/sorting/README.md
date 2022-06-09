@@ -8,6 +8,8 @@ Initially, the sorted subarray is empty and the unsorted subarray is the whole a
 In each iteration the unsorted subarray is traversed to find the smallest element (or largest, depending on sorting order). Then this element is added to the sorted subarray by swapping it with the leftmost unsorted element.
 
 --------------------------------
+***Comparison-based sorting***
+
 ***Time Complexity O(N^2)***  
 - Inefficient on large arrays.
 - For each element, the entire array is checked to find the smallest element. So in the worst case, N elements are checked for each element.
@@ -52,6 +54,8 @@ Selection sort can be made **Stable** if instead of swapping, the minimum elemen
 The algorithm works by repeatedly swapping the adjacent elements if they are in the wrong order. The pass through the array is repeated until the array is sorted.
 
 --------------------------------
+***Comparison-based sorting***
+
 ***Time Complexity***  
 - Worst-case and Average complexity of O(N^2);
 - Best-case of O(N) , when an array is already sorted.
@@ -97,6 +101,8 @@ The algorithm maintains two subarrays in a given array:
 Starts with trivially sorted subarray of size 1. Picks an elements from the unsorted part and inserts it at the correct place in the sorted part (shifts all larger elements back to make space, and inserts into that correct position).
 
 --------------------------------
+***Comparison-based sorting***
+
 ***Time Complexity***
 - Worst-case and Average complexity of O(N^2);
 - Best-case of O(N) , when an array is already sorted (During each iteration, the element to be sorted is only compared with the right-most element of the sorted subarray.)  
@@ -145,6 +151,8 @@ Merge Sort is a Divide-and-Conquer algorithm
 <img src="imgs/Iterative_Merge_sort_algorithm_diagram.png" width="500" align="center"/> <br /> <br />    
 
 --------------------------------
+***Comparison-based sorting***
+
 ***Time Complexity O(N logN)***
 The complexity of the merge function is O(len1 + len2), where len1 is the length of the first half, and len2 is the length of the second half.
   

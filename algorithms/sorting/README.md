@@ -159,7 +159,7 @@ The complexity of the merge function is O(len1 + len2), where len1 is the length
 ***Space Complexity O(N)***  
 - Not in-place algorithm
 - Requires temporary array to store the merged and sorted subarrays. All elements are copied into an auxiliary array so N auxiliary space is required for merge sort.
-
+- There are variant with reduced space complexity and cost of copying (example Block (Merge) sort).
 
 ***Stable algorithm***
 

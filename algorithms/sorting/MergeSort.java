@@ -13,11 +13,12 @@ public class MergeSort {
 
         * Comparison-based sorting.
         * Time Complexity  O(N logN)
-           - The complexity of the merge function is O(len1 + len2), where len1 is the length of the first half, and len2 is the length of the second half.
+           - The complexity of the merge function is O(len1 + len2), where len1 is the length of the first half, and len2
+           is the length of the second half.
         * Space Complexity O(N)
            - Not in-place algorithm
-           - Requires temporary arrays to store the sorted sub-arrays. All elements are copied into an auxiliary array
-             so N auxiliary space is required for merge sort.
+           - Requires temporary array to store the merged and sorted subarrays. All elements are copied into an auxiliary
+           array so N auxiliary space is required for merge sort.
            - There are variant with reduced space complexity and cost of copying (example Block (Merge) sort).
         * Stable algorithm
         * Not Adaptive

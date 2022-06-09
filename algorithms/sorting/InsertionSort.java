@@ -7,10 +7,12 @@ public class InsertionSort {
         The algorithm maintains two subarrays in a given array:
         - an already sorted subarray
         - remaining subarray which is unsorted
-        Start with trivially sorted subarray of size 1. Pick an elements from the unsorted part and insert it at the correct
-        place in the sorted part (shifts all larger elements back to make space, and inserts into that correct position).
+        Starts with trivially sorted subarray of size 1. Picks an elements from the unsorted part and inserts it at the
+        correct place in the sorted part (shifts all larger elements back to make space, and inserts into that correct
+                                          position).
 
 
+        * Comparison-based sorting.
         * Time Complexity
            - Worst-case and Average complexity of O(N^2);
            - Best-case of O(N) , when an array is already sorted (During each iteration, the element to be sorted is only
@@ -37,8 +39,8 @@ public class InsertionSort {
 
         AVOID:
         - When the array to be sorted has a large number of elements
-        - The array is completely  unsorted
-        - You want a faster run time and memory is not a concern.
+        - When the array is completely  unsorted
+        - When you want a faster run time and memory is not a concern.
     */
     public static void sort(int[] array) {
 
@@ -58,14 +60,14 @@ public class InsertionSort {
     }
 
     /*
-        Recursive Insertion Sort has no performance/implementation advantages over Iterative Insertion Sort.
+        Recursive Insertion Sort has NO performance/implementation advantages over Iterative Insertion Sort.
         * Recursion Idea:
          - Base Case: If array size is 1, return.
          - Recursively sort first size-1 elements.
          - Insert last element at its correct position in sorted array.
 
         This increases the additional memory consumption from O(1) to O(N) (at the deepest level of recursion the stack
-        contains N references to the array, each with accompanying value of variable size from N down to 1)
+        contains N references to the array, each with accompanying value of variable size from N down to 1).
     */
     public static void recursiveSort(int[] array) {
         recurse(array, array.length);

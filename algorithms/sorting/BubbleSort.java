@@ -7,30 +7,32 @@ public class BubbleSort {
         The algorithm works by repeatedly swapping the adjacent elements if they are in the wrong order. The pass through
         the array is repeated until the array is sorted.
 
-         * Time Complexity
-            - Worst-case and Average complexity of O(N^2);
-            - Best-case of O(N) , when an array is already sorted
-         * Space Complexity O(1)
-            - In-place algorithm
-         * Stable algorithm
-         * improvedSort version is Adaptive. If the array is partially sorted (no swaps were performed), we'll terminate
-           the sorting early.
 
-         * Number of Comparisons (Worst case) O(N^2)
-            - every element is compared to every other element
-         * Number of Swaps (Worst case) O(N^2)
+        * Comparison-based sorting.
+        * Time Complexity
+           - Worst-case and Average complexity of O(N^2);
+           - Best-case of O(N) , when an array is already sorted
+        * Space Complexity O(1)
+           - In-place algorithm
+        * Stable algorithm
+        * improvedSort version is Adaptive. If the array is partially sorted (no swaps were performed), we'll terminate
+          the sorting early.
+
+        * Number of Comparisons (Worst case) O(N^2)
+           - every element is compared to every other element
+        * Number of Swaps (Worst case) O(N^2)
 
 
-          USE:
-          - When the array is partially sorted - since bubble sort is adaptive
-          - When we have memory usage constraints
-          - When a simple sorting implementation is desired
-          - When the array to be sorted is relatively small
+         USE:
+         - When the array is partially sorted - since bubble sort is adaptive
+         - When we have memory usage constraints
+         - When a simple sorting implementation is desired
+         - When the array to be sorted is relatively small
 
-          AVOID:
-          - When the array-to-be-sorted has a large number of elements
-          - When the array is completely  unsorted
-          - When wanted a faster run time and memory is not a concern.
+         AVOID:
+         - When the array-to-be-sorted has a large number of elements
+         - When the array is completely  unsorted
+         - When wanted a faster run time and memory is not a concern.
     */
 
     //Note that this function always runs O(N^2) time even if the array is sorted. Best-case time complexity is also O(N^2)

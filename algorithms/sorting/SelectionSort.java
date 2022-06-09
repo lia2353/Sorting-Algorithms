@@ -11,6 +11,8 @@ public class SelectionSort {
         In each iteration the unsorted subarray is traversed to find the smallest element (or largest, depending on sorting
         order). Then this element is added to the sorted subarray by swapping it with the leftmost unsorted element.
 
+
+        * Comparison-based sorting.
         * Time Complexity O(N^2)
           - Inefficient on large arrays.
           - For each element, the entire array is checked to find the smallest element. So in the worst case, N elements

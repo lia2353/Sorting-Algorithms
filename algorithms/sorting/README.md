@@ -145,7 +145,12 @@ Indeed, good quicksort implementations use insertion sort for arrays smaller tha
 
 # Merge Sort
 Merge Sort is a Divide-and-Conquer algorithm
-- The Top-Down Merge sort approach is uses recursion mechanism. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
+(Divide and conquer is a technique used for breaking algorithms down into subproblems, solving the subproblems, and then combining the results back together to solve the original problem.)
+
+
+- The Top-Down Merge sort approach is uses recursion mechanism.  
+Base case is when the array has only one element.  
+Split the input array into two halves (Divide), call itself for the two halves, and then merge the two sorted halves (Conquer).
 - The Bottom-Up Merge sort approach uses iterative methodology. It starts with the single-element arrays, combines and sorts two adjacent arrays. The combined-sorted arrays are again combined and sorted with each other until one big sorted array is achieved.
 
 <img src="imgs/Recursive_Merge_sort_algorithm_diagram.png" width="350" align="left"/>
@@ -177,6 +182,8 @@ The complexity of the merge function is O(len1 + len2), where len1 is the length
 - Preserves the order of equal elements
 - Handles slow-to-access sequential data efficiently
 - The merge operation of merge sort can be implemented without extra space for linked lists.
+- Can be used for external sorting
+- Highly parallelizable.
 
 
 #### AVOID:

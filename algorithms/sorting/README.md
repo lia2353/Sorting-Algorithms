@@ -9,7 +9,7 @@ In each iteration the unsorted subarray is traversed to find the smallest elemen
 
 --------------------------------
 ***Comparison-based sorting***  
-- Comparison sorts are limited by a lower bound of O(N logN).
+- Comparison sorts are limited by a lower bound of Ω(N logN).
 
 ***Time Complexity O(N^2)***  
 - Inefficient on large arrays.
@@ -186,6 +186,35 @@ The complexity of the merge function is O(len1 + len2), where len1 is the length
 
 
 
+
+
+
+# Counting Sort
+
+--------------------------------
+***Integer sorts (sometimes called counting sorts)***  
+- Not a comparison-based sorting.
+- Do not make comparisons, so they are not bounded by Ω(N logN).
+
+***Time Complexity  O(N + R)***  
+- where R is the range (and the size ot count array).
+
+***Space Complexity O(N + R)***  
+- Uses a temporary arrays making it a Non-In-place algorithm.
+
+**Not Stable algorithm***  
+- It can be made stable.
+
+--------------------------------
+
+- The algorithm is efficient if the range of input data is not significantly greater than the number of objects to be sorted (Consider the situation where the input sequence is in range 1 to 10K and the data is 10, 5, 10K, 5K).
+ 
+ <img src="imgs/Counting_Sort.gif " width="450" align="left"/> <br /> <br />   <br /> <br />   <br /> <br />   <br /> <br />   <br /> <br />  
+ 
+ 
+ 
+ 
+ 
 
 
 **References:**  

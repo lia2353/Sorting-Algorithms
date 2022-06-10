@@ -156,6 +156,8 @@ Split the input array into two halves (Divide), call itself for the two halves, 
 <img src="imgs/Recursive_Merge_sort_algorithm_diagram.png" width="350" align="left"/>
 <img src="imgs/Iterative_Merge_sort_algorithm_diagram.png" width="500" align="center"/> <br /> <br />    
 
+
+# Counting sort
 --------------------------------
 ***Comparison-based sorting***
 

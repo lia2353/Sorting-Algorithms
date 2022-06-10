@@ -30,11 +30,13 @@ public class MergeSort {
         - Preserves the order of equal elements
         - Handles slow-to-access sequential data efficiently
         - The merge operation of merge sort can be implemented without extra space for linked lists.
+        - Can be used for external sorting
+        - Highly parallelizable.
 
         AVOID:
         - Slower comparative to the other sort algorithms for smaller tasks.
         - The algorithm requires an additional memory space of O(N) for the temporary array.
-        - It goes through the whole process even if the array is sorted.
+        - It goes through the whole process even if the array is sorted (in this case prefer Insertion sort).
 
     */
     // Top-Down Merge sort implementation (Recursive):

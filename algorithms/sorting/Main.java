@@ -25,6 +25,16 @@ public class Main {
         MergeSort.iterativeSort(averageArray);
 
         print(averageArray);
+
+        /*
+        int[] countingSortArray = {6, 8, -3, -3, 6, 5, 6, 2, -3};
+        print(countingSortArray);
+
+        CountingSort.sort(countingSortArray);
+        //CountingSort.simpleSort(countingSortArray);
+
+        print(countingSortArray);
+        */
     }
 
 

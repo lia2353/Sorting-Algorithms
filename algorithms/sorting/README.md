@@ -8,8 +8,8 @@ Initially, the sorted subarray is empty and the unsorted subarray is the whole a
 In each iteration the unsorted subarray is traversed to find the smallest element (or largest, depending on sorting order). Then this element is added to the sorted subarray by swapping it with the leftmost unsorted element.
 
 --------------------------------
-***Comparison-based sorting***
-- Comparison sorts are limited by a lower bound of O(nlog⁡n)O(n \log n)O(nlogn)
+***Comparison-based sorting***  
+- Comparison sorts are limited by a lower bound of O(N logN).
 
 ***Time Complexity O(N^2)***  
 - Inefficient on large arrays.

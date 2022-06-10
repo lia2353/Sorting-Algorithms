@@ -9,6 +9,7 @@ In each iteration the unsorted subarray is traversed to find the smallest elemen
 
 --------------------------------
 ***Comparison-based sorting***
+- Comparison sorts are limited by a lower bound of O(nlog⁡n)O(n \log n)O(nlogn)
 
 ***Time Complexity O(N^2)***  
 - Inefficient on large arrays.

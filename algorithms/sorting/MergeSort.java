@@ -17,21 +17,21 @@ public class MergeSort {
            is the length of the second half.
         * Space Complexity O(N)
            - Not in-place algorithm
-           - Requires temporary array to store the merged and sorted subarrays. All elements are copied into an auxiliary
+           - Requires temporary array to store the merged and sorted sub-arrays. All elements are copied into an auxiliary
            array so N auxiliary space is required for merge sort.
            - There are variant with reduced space complexity and cost of copying (example Block (Merge) sort).
         * Stable algorithm
         * Not Adaptive
 
 
-         USE:
+        USE:
         - Works well for larger lists
         - Has a consistent running time
         - Preserves the order of equal elements
         - Handles slow-to-access sequential data efficiently
         - The merge operation of merge sort can be implemented without extra space for linked lists.
         - Can be used for external sorting
-        - Highly parallelizable.
+        - Highly parallelizeable.
 
         AVOID:
         - Slower comparative to the other sort algorithms for smaller tasks.
@@ -50,13 +50,13 @@ public class MergeSort {
             return;
         }
 
-        // Divide the array into two subarrays (almost equal halves) and make a recursive call to sort the subarrays.
+        // Divide the array into two sub-arrays (almost equal halves) and make a recursive call to sort the sub-arrays.
         int mid = left + (right - left) / 2;
 
         recurse(array, left, mid);
         recurse(array, mid + 1, right);
 
-        // Merge both sorted subarrays array[left, mid] and array[mid + 1, right] to form sorted array
+        // Merge both sorted sub-arrays array[left, mid] and array[mid + 1, right] to form sorted array
         merge(array, left, mid, right);
     }
 
@@ -66,10 +66,10 @@ public class MergeSort {
         int secondArrayIndex = mid + 1;
         int mergedArrayIndex = 0;
 
-        // Traversing both subarrays while both are non-empty and adding the smallest of both elements to the merged array
+        // Traversing both sub-arrays while both are non-empty and adding the smallest of both elements to the merged array
         while (firstArrayIndex <= mid && secondArrayIndex <= right) {
 
-            // Stable sort -> if current elements of both subarrays are equal, select the element from the left subarray.
+            // Stable sort -> if current elements of both sub-arrays are equal, select the element from the left sub-array.
             if (array[firstArrayIndex] <= array[secondArrayIndex]) {
                 mergedArray[mergedArrayIndex] = array[firstArrayIndex];
                 ++mergedArrayIndex;
@@ -81,13 +81,13 @@ public class MergeSort {
             }
         }
 
-        // Add remaining elements of the left subarray
+        // Add remaining elements of the left sub-array
         while (firstArrayIndex <= mid) {
             mergedArray[mergedArrayIndex] = array[firstArrayIndex];
             ++mergedArrayIndex;
             ++firstArrayIndex;
         }
-        // Add remaining elements of the right subarray
+        // Add remaining elements of the right sub-array
         while (secondArrayIndex <= right) {
             mergedArray[mergedArrayIndex] = array[secondArrayIndex];
             ++mergedArrayIndex;
@@ -104,12 +104,12 @@ public class MergeSort {
     // Bottom-Up Merge sort implementation (Iterative):
     public static void iterativeSort(int[] array) {
 
-        // Each subarray of size 1 is trivially sorted.
-        // First merge and sort subarrays of size 1 to create sorted subarrays of size 2, then merge and sort subarrays
-        // of size 2 to create sorted subarrays of size 4, and so on.
+        // Each sub-array of size 1 is trivially sorted.
+        // First merge and sort sub-arrays of size 1 to create sorted sub-arrays of size 2, then merge and sort sub-arrays
+        // of size 2 to create sorted sub-arrays of size 4, and so on.
         for (int currentSize = 1; currentSize < array.length; currentSize *= 2) {
 
-            // Merge the two subarrays: [i ... i+size-1] and [i+size ... i+2*size-1]
+            // Merge the two sub-arrays: [i ... i+size-1] and [i+size ... i+2*size-1]
             for (int i = 0; i < array.length; i += (2 * currentSize)) {
                 int left = i;
                 int mid = Math.min(i + currentSize - 1, array.length - 1);

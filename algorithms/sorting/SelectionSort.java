@@ -3,13 +3,13 @@ package algorithms.sorting;
 public class SelectionSort {
 
     /*
-        The algorithm maintains two subarrays in a given array:
-        - an already sorted subarray
-        - remaining subarray which is unsorted
-        Initially, the sorted subarray is empty and the unsorted subarray is the whole array.
+        The algorithm maintains two sub-arrays in a given array:
+        - an already sorted sub-array
+        - remaining sub-array which is unsorted
+        Initially, the sorted sub-array is empty and the unsorted sub-array is the whole array.
 
-        In each iteration the unsorted subarray is traversed to find the smallest element (or largest, depending on sorting
-        order). Then this element is added to the sorted subarray by swapping it with the leftmost unsorted element.
+        In each iteration the unsorted sub-array is traversed to find the smallest element (or largest, depending on
+        sorting order). Then this element is added to the sorted sub-array by swapping it with the leftmost unsorted element.
 
 
         * Comparison-based sorting.
@@ -21,7 +21,7 @@ public class SelectionSort {
           - In-place algorithm (Algorithm that does not need an extra space and produces an output in the same memory that
                              contains the data by transforming the input ‘in-place’. However, a small constant extra space
                              used for variables is allowed).
-        * The default implementation is not stable, but it can be made stable (stable -> if two objects with equal keys
+        * The default implementation is Not Stable, but it can be made stable (stable -> if two objects with equal keys
                                                                               appear in the same order in sorted output
                                                                               as they appear in the input array).
         * Number of Comparisons O(N^2)
@@ -58,11 +58,15 @@ public class SelectionSort {
 
             // Swap the found minimum element with the leftmost unsorted element
             if (minIndex != i) {
-                int temp = array[i];
-                array[i] = array[minIndex];
-                array[minIndex] = temp;
+                swap(array, i, minIndex);
             }
         }
+    }
+
+    private static void swap(int[] array, int firstIndex, int secondIndex) {
+        int temp = array[firstIndex];
+        array[firstIndex] = array[secondIndex];
+        array[secondIndex] = temp;
     }
 
     /*
@@ -88,7 +92,8 @@ public class SelectionSort {
                 }
             }
 
-            // Insert the found minimum element with the leftmost unsorted element
+            // In the sorted sub-array shifts all larger elements back to make space for currentElement right position
+            // In the unsorted sub-array shifts all larger elements back to make space for the found minimum right position.
             if (minIndex != i) {
                 int temp = array[minIndex];
                 while (minIndex > i) {
@@ -100,5 +105,6 @@ public class SelectionSort {
 
         }
     }
+
 }
 

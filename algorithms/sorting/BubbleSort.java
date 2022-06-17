@@ -35,7 +35,7 @@ public class BubbleSort {
          - When wanted a faster run time and memory is not a concern.
     */
 
-    //Note that this function always runs O(N^2) time even if the array is sorted. Best-case time complexity is also O(N^2)
+    // Note that this function always runs O(N^2) time even if the array is sorted. Best-case time complexity is also O(N^2)
     public static void sort(int[] array) {
 
         for (int i = 0; i < array.length - 1; ++i) {
@@ -45,16 +45,14 @@ public class BubbleSort {
 
                 // Swap if this pair is out of order
                 if (array[j] > array[j + 1]) {
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+                    swap(array, j, j + 1);
                 }
             }
         }
     }
 
 
-    // We can optimize by stopping the algorithm if the inner loop didn’t cause any swap.
+    // We can optimize by stopping the algorithm if the inner loop didn't cause any swap.
     public static void improvedSort(int[] array) {
         // After each iteration we keep track whether any elements were swapped.
         boolean swapped;
@@ -66,10 +64,7 @@ public class BubbleSort {
             for (int j = 0; j < array.length - 1 - i; ++j) {
                 // Swap if this pair is out of order
                 if (array[j] > array[j + 1]) {
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-
+                    swap(array, j, j + 1);
                     swapped = true;
                 }
             }
@@ -87,8 +82,8 @@ public class BubbleSort {
         Recursive Bubble Sort has no performance/implementation advantages over Iterative Bubble Sort.
         * Recursion Idea:
          - Base Case: If array size is 1, return.
-         - Do One Pass of normal Bubble Sort. This pass fixes last element of current subarray.
-         - Recur for all elements except last of current subarray.
+         - Do One Pass of normal Bubble Sort. This pass fixes last element of current sub-array.
+         - Recur for all elements except last of current sub-array.
 
         This increases the additional memory consumption from O(1) to O(N) (recursively calling the function for each
                                                                             element of the array).
@@ -97,7 +92,7 @@ public class BubbleSort {
         recurse(array, array.length);
     }
 
-    // Perform Bubble Sort on subarray [i ... size]
+    // Perform Bubble Sort on sub-array [i ... size]
     private static void recurse(int[] array, int size) {
         // Base case
         if (size <= 1) {
@@ -108,9 +103,7 @@ public class BubbleSort {
         boolean swapped = false;
         for (int j = 0; j < size - 1; ++j) {
             if (array[j] > array[j + 1]) {
-                int temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
+                swap(array, j, j + 1);
                 swapped = true;
             }
         }
@@ -123,4 +116,10 @@ public class BubbleSort {
         recurse(array, size - 1);
     }
 
+
+    private static void swap(int[] array, int firstIndex, int secondIndex) {
+        int temp = array[firstIndex];
+        array[firstIndex] = array[secondIndex];
+        array[secondIndex] = temp;
+    }
 }

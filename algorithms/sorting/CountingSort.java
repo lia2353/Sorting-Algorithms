@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class CountingSort {
     /*
-        * Not a comparison-based sorting.
+        * Belongs to Integer sorts (sometimes called counting sorts)
+        - Not a comparison-based sorting.
+        - Integer sorts determine for each element how many elements are less than it. If there are 14 elements that are less than x, then x will be placed in the 15th slot. This information is used to place each element into the correct slot immediately — no need to rearrange arrays.
         * Time Complexity  O(N + R)
            - where R is the range (and the size ot count array).
         * Space Complexity O(N + R)
@@ -31,8 +33,8 @@ public class CountingSort {
         int[] inputArray = Arrays.copyOf(array, array.length);
 
         // Counts the number of times each unique element occurs within the input array.
-        for (int i = 0; i < inputArray.length; ++i) {
-            ++count[inputArray[i] - rangeFrom];
+        for (int element : inputArray) {
+            ++count[element - rangeFrom];
         }
 
         // Perform prefix sum computation on count in order to determine, for each unique element, the position range where
@@ -62,8 +64,8 @@ public class CountingSort {
         int[] inputArray = Arrays.copyOf(array, array.length);
 
         // Counts the number of occurs within the input array.
-        for (int i = 0; i < inputArray.length; ++i) {
-            ++count[inputArray[i] - rangeFrom];
+        for (int element : inputArray) {
+            ++count[element - rangeFrom];
         }
 
         // Simply add count[k] copies of the element k to the sorted array.

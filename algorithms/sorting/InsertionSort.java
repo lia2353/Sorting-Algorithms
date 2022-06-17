@@ -1,13 +1,11 @@
 package algorithms.sorting;
 
-import java.util.Arrays;
-
 public class InsertionSort {
     /*
-        The algorithm maintains two subarrays in a given array:
-        - an already sorted subarray
-        - remaining subarray which is unsorted
-        Starts with trivially sorted subarray of size 1. Picks an elements from the unsorted part and inserts it at the
+        The algorithm maintains two sub-arrays in a given array:
+        - an already sorted sub-array
+        - remaining sub-array which is unsorted
+        Starts with trivially sorted sub-array of size 1. Picks an elements from the unsorted part and inserts it at the
         correct place in the sorted part (shifts all larger elements back to make space, and inserts into that correct
                                           position).
 
@@ -16,11 +14,11 @@ public class InsertionSort {
         * Time Complexity
            - Worst-case and Average complexity of O(N^2);
            - Best-case of O(N) , when an array is already sorted (During each iteration, the element to be sorted is only
-                                                            compared with the right-most element of the sorted subarray.)
+                                                            compared with the right-most element of the sorted sub-array.)
         * Space Complexity O(1)
            - In-place algorithm
         * Stable algorithm
-           - As elements bubble to the correct position in the sorted subarray, the original relative order of equal
+           - As elements bubble to the correct position in the sorted sub-array, the original relative order of equal
              elements is maintained.
         * Adaptive
            - Efficient for data sets that are already substantially sorted.
@@ -34,7 +32,7 @@ public class InsertionSort {
         - When you need to sort elements online - that is sorting them as they come in.
         * Insertion sort is one of the fastest algorithms for sorting very small arrays, even faster than quicksort;
           indeed, good quicksort implementations use insertion sort for arrays smaller than a certain threshold, also
-          when arising as subproblems; the exact threshold must be determined experimentally and depends on the machine,
+          when arising as sub-problems; the exact threshold must be determined experimentally and depends on the machine,
           but is commonly around ten.
 
         AVOID:
@@ -44,11 +42,11 @@ public class InsertionSort {
     */
     public static void sort(int[] array) {
 
-        // Runs over the unsorted subarray [1 ... length]; Starts from index 1, because single-element array is trivially sorted
+        // Runs over the unsorted sub-array [1 ... length]; Starts from index 1, because single-element array is trivially sorted
         for (int i = 1; i < array.length; ++i) {
             int currentElement = array[i];
 
-            // In the sorted subarray shifts all larger elements back to make space for currentElement right positioning
+            // In the sorted sub-array shifts all larger elements back to make space for currentElement right position
             int j = i - 1;
             while (j >= 0 && currentElement < array[j]) {
                 array[j + 1] = array[j];
@@ -96,7 +94,7 @@ public class InsertionSort {
         Binary Insertion Sort
 
         Binary Insertion Sort uses binary search to find the proper location to insert the selected item at each iteration.
-        In normal insertion, sorting takes O(i) (at ith iteration) in worst case. We can reduce it to O(logi) by using
+        In normal insertion, sorting takes O(i) (at ith iteration) in worst case. We can reduce it to O(log i) by using
         binary search.
 
         The algorithm, as a whole, still has worst case running time of O(N^2) because of the series of swaps required
@@ -104,14 +102,14 @@ public class InsertionSort {
     */
     public static void binarySort(int[] array) {
 
-        // Runs over the unsorted subarray [1 ... length]; Starts from index 1, because single-element array is trivially sorted
+        // Runs over the unsorted sub-array [1 ... length]; Starts from index 1, because single-element array is trivially sorted
         for (int i = 1; i < array.length; ++i) {
 
             int currentElement = array[i];
             // Find the position where currentElement should be inserted
             int insertPosition = binarySearch(array, 0, i - 1, currentElement);
 
-            // In the sorted subarray shifts all elements after insertPosition back to make space for currentElement
+            // In the sorted sub-array shifts all elements after insertPosition back to make space for currentElement
             for (int j = i - 1; j >= insertPosition; --j) {
                 array[j + 1] = array[j];
             }
@@ -135,4 +133,22 @@ public class InsertionSort {
 
         return binarySearch(array, start, mid - 1, key);
     }
+
+    // Insertion sort for Hybrid QuickSort implementation. Same as sort function, but with range
+    public static void insertionSort(int[] array, int leftIndex, int rightIndex) {
+        // Runs over the unsorted sub-array [leftIndex ... rightIndex]
+        for (int i = leftIndex + 1; i <= rightIndex; ++i) {
+            int currentElement = array[i];
+
+            // In the sorted sub-array shifts all larger elements back to make space for currentElement right position
+            int j = i - 1;
+            while (j >= 0 && currentElement < array[j]) {
+                array[j + 1] = array[j];
+                --j;
+            }
+
+            array[j + 1] = currentElement;
+        }
+    }
+
 }

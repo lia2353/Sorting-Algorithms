@@ -157,6 +157,10 @@ Split the input array into two halves (Divide), call itself for the two halves, 
 <img src="imgs/Iterative_Merge_sort_algorithm_diagram.png" width="500" align="center"/> <br /> <br />    
 
 
+# QuickSort
+
+# Heap sort
+
 # Counting sort
 --------------------------------
 ***Comparison-based sorting***

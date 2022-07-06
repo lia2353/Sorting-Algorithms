@@ -295,7 +295,7 @@ public class QuickSort {
            - Worst-case O(N^2)
         * Space Complexity O(log n)
            - In-place algorithm
-           -  Since each recursion takes O(1) space, and there are logN recursions on average, the average space complexity
+           - Since each recursion takes O(1) space, and there are logN recursions on average, the average space complexity
            is given by O(log n).
         * Not Stable algorithm
 

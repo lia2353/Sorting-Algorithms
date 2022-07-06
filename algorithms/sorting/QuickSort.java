@@ -128,7 +128,6 @@ public class QuickSort {
         - This partition is more efficient than Lomuto’s partition because it does three times fewer swaps on average,
           and it creates efficient partitions even when all values are equal.
         - Not stable and worst-case is also O(N^2).
-        - Not stable and worst-case is also O(N^2).
         - Note that the pivot’s final location is not necessarily at the index that was returned, and the next two segments
         that the main algorithm recurs on are [leftIndex ... partitionIndex] and [partitionIndex+1 .. rightIndex].
     */

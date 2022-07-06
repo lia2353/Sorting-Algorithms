@@ -158,16 +158,7 @@ public class QuickSort {
             --rightPointer;
         }
     }
-
-    private static void print(final int[] array) {
-        System.out.print(array[0]);
-
-        for (int i = 1; i < array.length; ++i) {
-            System.out.print(", " + array[i]);
-        }
-
-        System.out.println();
-    }
+    
 
     /*
        QuickSort Tail Call Optimization (Reducing worst-case space to O(logN)).

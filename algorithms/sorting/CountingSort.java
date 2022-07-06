@@ -8,7 +8,7 @@ public class CountingSort {
         - Not a comparison-based sorting.
         - Integer sorts determine for each element how many elements are less than it. If there are 14 elements that are less than x, then x will be placed in the 15th slot. This information is used to place each element into the correct slot immediately — no need to rearrange arrays.
         * Time Complexity  O(N + R)
-           - where R is the range (and the size ot count array).
+           - where R is the range (and the size of count array).
         * Space Complexity O(N + R)
            - Uses a temporary arrays making it a Non-In-place algorithm.
         * Not Stable algorithm

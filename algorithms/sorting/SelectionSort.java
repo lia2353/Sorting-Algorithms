@@ -43,7 +43,7 @@ public class SelectionSort {
      */
     public static void sort(int[] array) {
 
-        // Extend the length of the sorter array [0 ... i]; Take (i < length - 1) because single element is already sorted
+        // Extend the length of the sorter array [0 ... i]; Take (i < length - 1) because single element is also min element.
         for (int i = 0; i < array.length - 1; ++i) {
 
             // Find the min element in the unsorted array [i ... length-1]
@@ -79,7 +79,7 @@ public class SelectionSort {
     */
     public static void stableSort(int[] array) {
 
-        // Extend the length of the sorter array [0 ... i]; Take (i < length - 1) because single element is already sorted
+        // Extend the length of the sorter array [0 ... i]; Take (i < length - 1) single element is also min element
         for (int i = 0; i < array.length - 1; ++i) {
 
             // Find the min element in the unsorted array [i ... length-1]
